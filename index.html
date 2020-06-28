@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sci-Fi Quote Generator</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="flex items-center justify-center">
+  <main>
+    <h1 class="mb-8 text-3xl font-bold text-center">Sci-Fi Quote Generator</h1>
+    <section id="quote-container"
+      class="w-auto max-w-3xl px-12 py-10 mx-4 bg-white bg-opacity-75 rounded-md shadow-2xl sm:mx-0 ">
+      <!-- Quote -->
+      <div class="grid items-start grid-cols-12">
+        <svg class="w-6 col-span-1 sm:w-8 quote-icon" viewBox="0 0 24 24">
+          <defs>
+            <style>
+              .a {
+                fill: none;
+                stroke: currentColor;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 1.5px
+              }
+            </style>
+          </defs>
+          <circle cx="5.25" cy="14.998" r="4.5" class="a" />
+          <path d="M.75 15a10.5 10.5 0 0110.5-10.5" class="a" />
+          <circle cx="17.25" cy="14.998" r="4.5" class="a" />
+          <path d="M12.75 15a10.5 10.5 0 0110.5-10.5" class="a" />
+        </svg>
+        <span id="quote" class="col-span-11 text-2xl font-semibold leading-relaxed text-gray-800">
+        </span>
+      </div>
+      <!-- Author -->
+      <div class="mt-6 text-xl italic text-center">
+        <span id="author"></span>
+        <span> - </span>
+        <span id="book"></span>
+      </div>
+      <!-- Button -->
+      <div class="flex justify-between mt-6">
+        <span class="inline-flex rounded-md shadow-sm">
+          <button type="button" id="twitter" title="Tweet This!"
+            class="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-600 border border-transparent rounded-md hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-700">
+            <svg class="w-5 h-5" viewBox="0 0 24 24">
+              <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M23.18 6.71l-2.1-.9 1.1-2.4-2.56.85a4.47 4.47 0 00-3-1.2 4.51 4.51 0 00-4.5 4.5v1c-3.54.73-6.63-1.2-9.5-4.5q-.75 4 1.5 6l-3.29-.5a4.55 4.55 0 004.25 4l-2.75 1c1 2 2.82 2.31 5.25 2.5a11.52 11.52 0 01-6.75 2c12.76 5.67 20.25-2.66 20.25-10v-.83z" />
+            </svg>
+          </button>
+        </span>
+        <span class="inline-flex rounded-md shadow-sm">
+          <button type="button" id="new-quote"
+            class="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-600 border border-transparent rounded-md hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-700">
+            <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <defs>
+                <style>
+                  .a {
+                    fill: none;
+                    stroke: currentColor;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px
+                  }
+                </style>
+              </defs>
+              <path
+                d="M5.33 17.848a9.545 9.545 0 0111.136-15.36M1.982 17.78c-1.213 2.125-1.619 3.774-.934 4.46 1.04 1.039 4.294-.43 8.062-3.418M13.423 18.067l-3.58-3.58L17.8 6.53a5.054 5.054 0 012.353-1.33l2.047-.514a.844.844 0 011.023 1.023l-.512 2.048a5.059 5.059 0 01-1.332 2.352z"
+                class="a" />
+              <path
+                d="M9.843 14.487l-2.932-.977a.422.422 0 01-.165-.7l1.022-1.022a3.383 3.383 0 013.462-.817l1.6.532zM13.423 18.067L14.4 21a.422.422 0 00.7.165l1.022-1.022a3.383 3.383 0 00.817-3.462l-.532-1.6z"
+                class="a" />
+            </svg>
+            New Quote
+          </button>
+        </span>
+      </div>
+    </section>
+    <div id="loader" class="loader"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
