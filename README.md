@@ -1,3 +1,3 @@
-# Static project scaffold
+# Sci-Fi Quote Generator
 
-Simple template for one page projects using tailwindcss and vanilla JS.
+Simple project to generate a random sci-fi quote, based on a Google Sheet using the Sheety API.
